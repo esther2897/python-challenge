@@ -37,7 +37,7 @@ with open(csvpath) as csvfile:
     dashline = "----------------------------"
     total_line = "Total Months: " + str(totalmonths)
     total_prof_line = "Total: $" + str(netprofit)
-    av_line = "Average  Change: $" + str(av_money)
+    av_line = "Average  Change: $" + str(round(av_money, 2))
     greatest_line = "Greatest Increase in Profits: " + max_month + " ($" + str(max_diff) + ")"
     least_line = "Greatest Decrease in Profits: " + min_month + " ($" + str(min_diff) + ")"
 print (introline)
