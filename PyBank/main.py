@@ -23,7 +23,7 @@ with open(csvpath) as csvfile:
         r_index = r_index + 1
         if r_index == max_diff_index:
             max_month = row [0]
-        elif r_index == min_diff_index
+        elif r_index == min_diff_index:
             min_month = row [0]
     av_money = sum(difference_arr)/len(difference_arr)
     introline = "Financial Analysis"
