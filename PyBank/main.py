@@ -32,7 +32,7 @@ with open(csvpath) as csvfile:
             max_month = row [0]
         elif r_index == min_diff_index:
             min_month = row [0]
-    av_money = sum(difference_arr)/len(difference_arr)
+    av_money = sum(difference_arr[1:])/(len(difference_arr) - 1)
     introline = "Financial Analysis"
     dashline = "----------------------------"
     total_line = "Total Months: " + str(totalmonths)
