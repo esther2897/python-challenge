@@ -24,7 +24,7 @@ with open(csvpath) as csvfile:
     votes = 0
 
     with open(output_path, 'w') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=',')
+        csvwriter = csv.writer(csvfile, delimiter = ',')
         header = "Election Results"
         print(header)
         csvwriter.writerow(header)
@@ -48,8 +48,12 @@ with open(csvpath) as csvfile:
         csvwriter.writerow(dashes)
         winner_num = max(votes_per_candidates)
         winner_index = votes_per_candidates.index(winner_num)
-        winner = refined_candidates(winner_index)
+        winner = refined_candidates[winner_index]
         winner_string = "Winner: " + winner
+        print(winner_string)
+        csvwriter.writerow(winner_string)
+        print(dashes)
+        csvwriter.writerow(dashes)
 
 
     
